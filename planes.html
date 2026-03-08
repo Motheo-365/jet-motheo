@@ -1,0 +1,280 @@
+<!-- u24666981 Motheo Morena-->
+<!-- Page should show a list of planes along with basic information about them. -->
+<!DOCtype html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "COS 216 Practical 1">
+		<meta name = "keywords" content = "COS216, UP, Pretoria">
+		<meta name = "author" content = "Motheo Morena">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel = "stylesheet" type = "text/css" href = "css/fonts.css">
+		
+		<title> Planes </title>
+	</head>
+
+	<body>
+		<header>
+			<h2><img src="img/JetMotheo.png" alt="Jet Motheo logo" class="header-logo">JET MOTHEO</h2>
+
+			<nav class = "navBar">
+				<ul>
+					<li><a href = "index.html"> Book Flights </a></li>
+					<li><a href = "bookings.html"> Bookings </a></li>
+					<li><a href = "planes.html"  class = "active"> Planes </a></li>
+					<li><a href = "favourites.html"> Favourites </a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class = "title">
+			<h1 class = "bebas-neue-regular"> PLANES </h1>
+		</section>
+
+		<article>
+			<div id = "header-image">
+				<img src = "img/plane.jpg" alt = "image of Plane.">
+			</div>
+
+			<section class = "no-functionality">
+				<div class = "controls-bar">
+					<div class = "searchbar">
+						<input type="text" placeholder = "Search...">
+						<button type="button" class="search-btn">Search</button>
+					</div>
+
+					<fieldset class="filter-group">
+						<legend>Filter</legend>
+						<div class="checkbox-list" role="group" aria-label="Filter by tags">
+							<div class="checkbox-item">
+								<input type="checkbox" id="filter-seat-range" name="filterRange" value="seat_range">
+								<label for="filter-seat-range">Seat range</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="filter-cabin-class" name="filterRange" value="cabin_class_of_planes">
+								<label for="filter-cabin-class">Cabin Class</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="filter-max-range" name="filterRange" value="max_range">
+								<label for="filter-max-range">Max Range</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="filter-max-cargo" name="filterRange" value="max_cargo_hold">
+								<label for="filter-max-cargo">Max. Cargo Hold</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="filter-manufacturer" name="filterRange" value="manufacturer">
+								<label for="filter-manufacturer">Manufacturer</label>
+							</div>
+						</div>
+					</fieldset>
+
+					<div class = "sort">
+						<label for = "sort">Sort by:</label>
+						<select name = "sortRange" class = "dropDown">
+							<option value = "manufacturer">Manufacturer</option>
+							<option value = "range">Range</option>
+							<option value = "numSeats">Number of Seats</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="filter-actions">
+					<button type="button" class="reset-btn">Clear all filters</button>
+					<button type="button" class="apply-btn">Apply filters</button>
+				</div>
+			</section>
+
+			<section class="plane-section">
+
+			    <!-- Narrow Body Section -->
+			    <h2 class="section-heading">Narrow Body Aircraft</h2>
+
+			    <div class="plane-grid">
+
+			        <!-- Card 1 -->
+			        <div class="plane-card">
+			            <!-- Hidden state -->
+			            <input type="checkbox" id="fav-a320" class="fav-checkbox">
+
+			            <!-- Star icon (clickable) -->
+			            <label for="fav-a320" class="fav-icon" aria-label="Add Airbus A320 to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/airbus_a320.jpg" alt="Airbus A320">
+			                <figcaption>Airbus A320</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Airbus A320</p>
+
+			                <h3>Number of Seats</h3>
+			                <p>140 – 180 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#airbusa320" class="view-btn">View</a>
+			                    <label for="fav-a320" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			        <!-- Card 2 -->
+			        <div class="plane-card">
+			            <input type="checkbox" id="fav-a319" class="fav-checkbox">
+			            <label for="fav-a319" class="fav-icon" aria-label="Add Airbus A319 to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/airbus_a319.jpg" alt="Airbus A319">
+			                <figcaption>Airbus A319</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Airbus A319</p>
+
+			                <h3>Number of Seats</h3>
+			                <p>124 – 156 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#airbusa319" class="view-btn">View</a>
+			                    <label for="fav-a319" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			        <!-- Card 3 -->
+			        <div class="plane-card">
+			            <input type="checkbox" id="fav-b738" class="fav-checkbox">
+			            <label for="fav-b738" class="fav-icon" aria-label="Add Boeing 737-800 to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/boeing_737_800.jpg" alt="Boeing 737-800">
+			                <figcaption>Boeing 737-800</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Boeing 737-800</p>
+
+			            <h3>Number of Seats</h3>
+			                <p>160 – 189 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#boeing737-800" class="view-btn">View</a>
+			                    <label for="fav-b738" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			        <!-- Card 4 -->
+			        <div class="plane-card">
+			            <input type="checkbox" id="fav-e190" class="fav-checkbox">
+			            <label for="fav-e190" class="fav-icon" aria-label="Add Embraer E190 to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/embraer_e190.jpg" alt="Embraer E190">
+			                <figcaption>Embraer E190</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Embraer E190</p>
+
+			                <h3>Number of Seats</h3>
+			                <p>96 – 114 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#embraere190" class="view-btn">View</a>
+			                    <label for="fav-e190" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			    </div>
+
+			    <!-- Wide Body Section -->
+			    <h2 class="section-heading">Wide Body Aircraft</h2>
+
+			    <div class="plane-grid">
+
+			        <!-- Card 5 -->
+			        <div class="plane-card">
+			            <input type="checkbox" id="fav-a330" class="fav-checkbox">
+			            <label for="fav-a330" class="fav-icon" aria-label="Add Airbus A330 to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/airbus_a330.jpg" alt="Airbus A330">
+			                <figcaption>Airbus A330</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Airbus A330</p>
+
+			                <h3>Number of Seats</h3>
+			                <p>250 – 300 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#airbusa330" class="view-btn">View</a>
+			                    <label for="fav-a330" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			        <!-- Card 6 -->
+			        <div class="plane-card">
+			            <input type="checkbox" id="fav-a350" class="fav-checkbox">
+			            <label for="fav-a350" class="fav-icon" aria-label="Add Airbus A350-900 to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/airbus_a350.jpg" alt="Airbus A350">
+			                <figcaption>Airbus A350</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Airbus A350-900</p>
+
+			                <h3>Number of Seats</h3>
+			                <p>300 – 350 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#airbusa350" class="view-btn">View</a>
+			                    <label for="fav-a350" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			        <!-- Card 7 -->
+			        <div class="plane-card">
+			            <input type="checkbox" id="fav-b787" class="fav-checkbox">
+			            <label for="fav-b787" class="fav-icon" aria-label="Add Boeing 787 Dreamliner to favourites">&#9734;</label>
+
+			            <div class="plane-left">
+			                <img src="img/boeing_787_dreamliner.jpg" alt="Boeing 787 Dreamliner">
+			                <figcaption>Boeing 787 Dreamliner</figcaption>
+			            </div>
+
+			            <div class="plane-right">
+			                <h3>Manufacturer &amp; Model</h3>
+			                <p>Boeing 787 Dreamliner</p>
+
+			                <h3>Number of Seats</h3>
+			                <p>240 – 330 seats</p>
+
+			                <div class="plane-actions">
+			                    <a href="view.html#boeing787dreamliner" class="view-btn">View</a>
+			                    <label for="fav-b787" class="fav-btn" aria-live="polite">Add to Favourites</label>
+			                </div>
+			            </div>
+			        </div>
+
+			    </div>
+
+			</section>
+		</article>
+	</body>
+</html>

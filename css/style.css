@@ -1,0 +1,1022 @@
+/* u24666981 Motheo Morena*/
+
+* {
+    box-sizing: border-box;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #5a73a95b;
+    margin: 0;
+    padding-top: 110px; /* space for fixed navbar */
+        overflow-x: hidden;
+}
+
+
+header {
+    background-color: #1A1F36;
+    color: white;
+    padding: 1.2em 2em;
+    box-shadow: 3px 5px 10px rgb(80, 80, 80);
+
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    width: 98%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+}
+
+header h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.header-logo {
+    width: 175px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navBar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navBar li {
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 0;
+    transition: font-weight 0.2s ease, transform 0.1s ease;
+}
+
+.navBar a:hover {
+    font-weight: 600;
+}
+
+.navBar a.active {
+    border-bottom: 3px solid white;
+    padding-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+article {
+    padding: 1.2em;
+    margin: 0 auto;
+}
+
+#header-image {
+    height: 42.2rem;
+    border-radius: 8px;
+    background-image: url("../img/plane.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#header-image img {
+    display: none;
+}
+
+form {
+    padding: 1.2em;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 3px 5px 5px rgb(160, 160, 160);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.8rem;
+    padding-top: 0.5rem;
+}
+
+.dropDown {
+    width: 80%;
+    padding: 0.5em;
+    margin-left: 0.8em;
+}
+
+input[type=date] {
+    width: 80%;
+    padding: 0.3rem;
+    margin-left: 0.8em;
+}
+
+input[type=number] {
+    width: 43%;
+    padding: 5px;
+    margin-left: 0.8em;
+}
+
+input[type=submit], .submit-btn {
+    cursor: pointer;
+    width: 8em;
+    padding: 0.5em;
+}
+
+.level1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25em;
+    padding-bottom: 1.2rem;
+}
+
+.level2 {
+display: grid;
+    grid-template-columns: 2.5fr 2fr;
+    gap: 2rem;
+}
+
+.level2 > div:last-child {
+    padding-left: 2rem;
+}
+
+.passengers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0.2em;
+    padding-bottom: 1.5em;
+    padding-left: 1rem;
+}
+
+.title {
+    transform: translate(40rem, 20rem);
+    color: white;
+}
+
+#flightTime {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    border-right: 5px solid black;
+}
+
+#cabinClass {
+    display: flex;
+    width: 80%;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 2.3em;
+}
+
+#planeType {
+    width: 97%;
+}
+
+/* =================  Plane.html ================================ */
+    .no-functionality {
+      margin: 24px;
+      border: 3px solid rgb(70, 70, 187);
+      padding: 2em;
+      border-radius: 10px;
+    }
+
+    .controls-bar {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    /* --- Search bar --- */
+    .searchbar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .searchbar input[type="text"] {
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .search-btn {
+      padding: 8px 16px;
+      background: #2563eb;
+      color: white;
+      border: 1px solid #2563eb;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search-btn:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+
+    /* --- Filter container --- */
+    .filter-group {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 0;
+    }
+
+    .filter-group > legend {
+      padding: 0 6px;
+      font-weight: 700;
+      color: #111827;
+      font-size: 0.95rem;
+    }
+
+    /* --- Checkbox pills --- */
+    .checkbox-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 6px 0 0;
+    }
+
+    .checkbox-item {
+      position: relative;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .checkbox-item label {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      background: #fff;
+      color: #374151;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .checkbox-item label:hover {
+      border-color: #9ca3af;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked + label {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    /* --- Sort dropdown --- */
+    .sort {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .sort label {
+      font-weight: 500;
+      color: #374151;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sort .dropDown {
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      width: auto;
+      margin-left: 0;
+    }
+
+
+
+        /* Actions */
+        .filter-actions {
+          display: flex;
+          gap: 10px;
+        }
+
+        .reset-btn,
+        .apply-btn {
+          padding: 8px 12px;
+          border-radius: 8px;
+          cursor: pointer;
+          border: 1px solid #d1d5db;
+          background: #fff;
+          color: #374151;
+          font-weight: 500;
+          transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .apply-btn {
+          border-color: #2563eb;
+          background: #2563eb;
+          color: #fff;
+        }
+
+        .reset-btn:hover {
+          background: #f9fafb;
+          border-color: #9ca3af;
+        }
+
+        .apply-btn:hover {
+          background: #1d4ed8;
+          border-color: #1d4ed8;
+        }
+
+    .plane-section {
+        width: 90%;
+        margin: auto;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        margin: 30px 0 12px;
+    }
+
+    /* Grid */
+        .plane-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 20px;
+        }
+
+    /* Card */
+        .plane-card {
+            position: relative;
+            display: flex;
+            gap: 18px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            width: 103%;
+            border-radius: 12px;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .plane-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,.12);
+            border-color: #d1d5db;
+        }
+
+    /* Left column (image + caption) */
+        .plane-left img {
+            width: 160px;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .plane-left figcaption {
+            text-align: center;
+            margin-top: 6px;
+            font-size: .9rem;
+            color: #4b5563;
+        }
+
+    /* Right column text */
+        .plane-right h3 {
+            margin: 4px 0 2px;
+            font-size: 1rem;
+            color: #111827;
+        }
+
+        .plane-right p {
+            margin: 0 0 8px;
+            color: #374151;
+        }
+
+        /* Hidden checkbox */
+        .fav-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Star icon in top-right */
+        .fav-icon {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 26px;
+            line-height: 1;
+            color: #c4c4c4;
+            transition: color .25s ease, transform .25s ease;
+            user-select: none;
+        }
+
+        /* When favourited star should turn gold */
+        .fav-checkbox:checked + .fav-icon {
+            color: #f2b01e;
+            text-shadow: 0 0 6px rgba(242,176,30,.35);
+        }
+
+    /* Buttons container */
+    .plane-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    /* View button (link) */
+    .view-btn {
+        display: inline-block;
+        padding: 10px 14px;
+        width: 25%;
+        background: #10b981;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background .25s ease, transform .1s ease;
+        font-weight: 600;
+        white-space: nowrap;
+        text-decoration: none;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    .view-btn:hover {
+        background: #059669;
+    }
+
+    .view-btn:active {
+        transform: translateY(1px);
+    }
+
+    /* Button (label) */
+    .fav-btn {
+        display: inline-block;
+        width: 100%;
+        padding: 5px 10px;
+        background: #2563eb;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background .25s ease, transform .1s ease;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .fav-btn:hover  { 
+        background: #1d4ed8;
+    }
+
+    .fav-btn:active { 
+        transform: translateY(1px); 
+    }
+
+    /* ============ Swap the tect when plane is favourited */
+    .fav-checkbox:checked ~ .plane-right .fav-btn {
+        position: relative;
+        color: transparent;
+    }
+
+        /* Replace Text */
+        .fav-checkbox:checked ~ .plane-right .fav-btn::after {
+            content: "Added to Favourites";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: #fff;
+        }
+
+    /* Change button colour when favourited */
+    .fav-checkbox:checked ~ .plane-right .fav-btn {
+        background: #10b981;
+    }
+    .fav-checkbox:checked ~ .plane-right .fav-btn:hover {
+        background: #059669;
+    }
+
+/* =================  View.htm ================================ */
+    /* Back button */
+    .back-btn {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.25s ease, transform 0.1s ease;
+        font-size: 0.95rem;
+    }
+
+    .back-btn:hover {
+        background: #1d4ed8;
+    }
+
+    .back-btn:active {
+        transform: translateY(1px);
+    }
+
+    #airbusa320,
+    #airbusa319,
+    #boeing737-800,
+    #embraere190,
+    #airbusa330,
+    #airbusa350,
+    #boeing787dreamliner {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 20px auto;
+        max-width: 900px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    #airbusta320:hover,
+    #airbusa319:hover,
+    #boeing737-800:hover,
+    #embraere190:hover,
+    #airbusa330:hover,
+    #airbusa350:hover,
+    #boeing787dreamliner:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        border-color: #d1d5db;
+    }
+
+    [id^="airbus"],
+    [id^="boeing"],
+    [id^="embraer"] {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 20px auto;
+        max-width: 900px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    [id^="airbus"]:hover,
+    [id^="boeing"]:hover,
+    [id^="embraer"]:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        border-color: #d1d5db;
+    }
+
+    #airbusa320 h2,
+    #airbusa319 h2,
+    #boeing737-800 h2,
+    #embraere190 h2,
+    #airbusa330 h2,
+    #airbusa350 h2,
+    #boeing787dreamliner h2 {
+        color: #1f2937;
+        font-size: 1.8rem;
+        margin: 0 0 16px 0;
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 12px;
+    }
+
+    [id^="airbus"] h2,
+    [id^="boeing"] h2,
+    [id^="embraer"] h2 {
+        color: #1f2937;
+        font-size: 1.8rem;
+        margin: 0 0 16px 0;
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 12px;
+    }
+
+    #airbusa320 img,
+    #airbusa319 img,
+    #boeing737-800 img,
+    #embraere190 img,
+    #airbusa330 img,
+    #airbusa350 img,
+    #boeing787dreamliner img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin: 12px 0 16px 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    [id^="airbus"] img,
+    [id^="boeing"] img,
+    [id^="embraer"] img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin: 12px 0 16px 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    #airbusa320 p,
+    #airbusa319 p,
+    #boeing737-800 p,
+    #embraere190 p,
+    #airbusa330 p,
+    #airbusa350 p,
+    #boeing787dreamliner p {
+        color: #374151;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 12px 0;
+    }
+
+    [id^="airbus"] p,
+    [id^="boeing"] p,
+    [id^="embraer"] p {
+        color: #374151;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 12px 0;
+    }
+
+    #airbusa320 ul,
+    #airbusa319 ul,
+    #boeing737-800 ul,
+    #embraere190 ul,
+    #airbusa330 ul,
+    #airbusa350 ul,
+    #boeing787dreamliner ul {
+        list-style: none;
+        padding: 16px;
+        background: #f9fafb;
+        border-left: 4px solid #2563eb;
+        border-radius: 8px;
+        margin: 16px 0;
+    }
+
+    [id^="airbus"] ul,
+    [id^="boeing"] ul,
+    [id^="embraer"] ul {
+        list-style: none;
+        padding: 16px;
+        background: #f9fafb;
+        border-left: 4px solid #2563eb;
+        border-radius: 8px;
+        margin: 16px 0;
+    }
+
+    #airbusa320 li,
+    #airbusa319 li,
+    #boeing737-800 li,
+    #embraere190 li,
+    #airbusa330 li,
+    #airbusa350 li,
+    #boeing787dreamliner li {
+        color: #374151;
+        margin: 8px 0;
+        padding-left: 24px;
+        position: relative;
+    }
+
+    #airbusa320 li::before,
+    #airbusa319 li::before,
+    #boeing737-800 li::before,
+    #embraere190 li::before,
+    #airbusa330 li::before,
+    #airbusa350 li::before,
+    #boeing787dreamliner li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #2563eb;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    [id^="airbus"] li,
+    [id^="boeing"] li,
+    [id^="embraer"] li {
+        color: #374151;
+        margin: 8px 0;
+        padding-left: 24px;
+        position: relative;
+    }
+
+    [id^="airbus"] li::before,
+    [id^="boeing"] li::before,
+    [id^="embraer"] li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #2563eb;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+/* =================  Favourites.html================================ */
+    .favorites-section {
+        width: 90%;
+        margin: auto;
+        padding: 20px 0;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        margin: 30px 0 12px;
+        color: #1f2937;
+    }
+
+    .favorites-intro {
+        font-size: 1rem;
+        color: #6b7280;
+        margin-bottom: 24px;
+    }
+
+    /* Favorites grid */
+    .favorites-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        gap: 20px;
+    }
+
+    /* Favorite card */
+    .favorite-card {
+        position: relative;
+        display: flex;
+        gap: 18px;
+        padding: 18px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .favorite-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0,0,0,.12);
+        border-color: #d1d5db;
+    }
+
+    /* Left column (image + caption) */
+    .favorite-left img {
+        width: 160px;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .favorite-left figcaption {
+        text-align: center;
+        margin-top: 6px;
+        font-size: .9rem;
+        color: #4b5563;
+    }
+
+    /* Right column text */
+    .favorite-right h3 {
+        margin: 4px 0 2px;
+        font-size: 1rem;
+        color: #111827;
+    }
+
+    .favorite-right p {
+        margin: 0 0 8px;
+        color: #374151;
+    }
+
+    /* Favorite actions container */
+    .favorite-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    /* Remove button */
+    .remove-btn {
+        display: inline-block;
+        padding: 10px 14px;
+        background: #ef4444;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background .25s ease, transform .1s ease;
+        font-weight: 600;
+        white-space: nowrap;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    .remove-btn:hover {
+        background: #dc2626;
+    }
+
+    .remove-btn:active {
+        transform: translateY(1px);
+    }
+
+/* =================  Bookings.html ================================ */
+    .bookings-section {
+        width: 90%;
+        margin: auto;
+        padding: 20px 0;
+    }
+
+    .bookings-intro {
+        font-size: 1rem;
+        color: #6b7280;
+        margin-bottom: 24px;
+    }
+
+    /* Bookings list */
+    .bookings-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Booking card */
+    .booking-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 24px;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .booking-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0,0,0,.12);
+        border-color: #d1d5db;
+    }
+
+    /* Booking header */
+    .booking-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #f3f4f6;
+    }
+
+    .booking-header h3 {
+        font-size: 1.3rem;
+        color: #111827;
+        margin: 0;
+    }
+
+    .booking-status {
+        display: inline-block;
+        padding: 6px 12px;
+        background: #10b981;
+        color: white;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    /* Booking details */
+    .booking-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* Flight info grid */
+    .flight-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .info-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .info-group label {
+        font-size: 0.85rem;
+        color: #6b7280;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info-value {
+        font-size: 1.1rem;
+        color: #111827;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .info-value.price {
+        color: #2563eb;
+        font-size: 1.3rem;
+    }
+
+    /* Booking routes */
+    .booking-routes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background: #f9fafb;
+        border-radius: 8px;
+    }
+
+    .route-item {
+        text-align: center;
+    }
+
+    .route-item p {
+        margin: 0;
+    }
+
+    .route-code {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1f2937;
+    }
+
+    .route-time {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 4px;
+    }
+
+    .route-arrow {
+        font-size: 1.5rem;
+        color: #2563eb;
+        font-weight: 600;
+    }
+
+    /* Booking actions */
+    .booking-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    /* Cancel button */
+    .cancel-btn {
+        padding: 10px 16px;
+        background: #ef4444;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background .25s ease, transform .1s ease;
+        font-weight: 600;
+        font-size: 0.95rem;
+        font-family: inherit;
+    }
+
+    .cancel-btn:hover {
+        background: #dc2626;
+    }
+
+    .cancel-btn:active {
+        transform: translateY(1px);
+    }

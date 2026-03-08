@@ -1,0 +1,160 @@
+<!-- u24666981 Motheo Morena-->
+<!-- Book Flights page -->
+<!DOCtype html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "COS 216 Practical 1">
+		<meta name = "keywords" content = "COS216, UP, Pretoria">
+		<meta name = "author" content = "Motheo Morena">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel = "stylesheet" type = "text/css" href = "css/switch.css">
+		<link rel = "stylesheet" type = "text/css" href = "css/fonts.css">
+		
+		<title> Book Flights </title>
+	</head>
+
+	<body>
+		<header class = "home">
+			<h2><img src="img/JetMotheo.png" alt="Jet Motheo logo" class="header-logo">JET MOTHEO</h2>
+
+			<nav class = "navBar">
+				<ul>
+					<li><a href = "index.html" class = "active"> Book Flights </a></li>
+					<li><a href = "bookings.html"> Bookings </a></li>
+					<li><a href = "planes.html"> Planes </a></li>
+					<li><a href = "favourites.html"> Favourites </a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class = "title">
+			<h1 class = "bebas-neue-regular"> BOOK FLIGHTS </h1>
+		</section>
+
+		<article>
+			<div id = "header-image">
+				<img src = "img/plane.jpg" alt = "image of Plane.">
+			</div>
+
+			<form>
+				<div class = "level1">
+					<div>
+						<label for = "planeType"> Plane Type: </label>
+							<select name = "planeType" id = "planeType" class = "dropDown">
+								<option value = "narrowBody"> Narrow Body </option>
+								<option value = "wideBody"> Wide Body </option>
+							</select>
+					</div>
+
+					<!-- Toggle Switch for if it is a return flight or not -->
+					<label class = "switch">
+						<input type = "checkbox">
+						<span class = "slider round"></span>
+					</label>
+				</div>
+				
+				<div class = "level2">
+					<div id = "flightTime">	
+						<div class = "flights">
+							<label for = "departure"> Departure </label>
+								<select name = "departure" id = "departure"class = "dropDown" required>
+									<option value = "joburg"> Johannesburg </option>
+									<option value = "cape-town"> Cape Town </option>
+									<option value = "durban"> Durban </option>
+									<option value = "london"> London </option>
+									<option value = "new-york"> New York </option>
+								</select>
+
+							<label for = "arrival"> Arrival </label>
+								<select name = "arrival" id = "arrival" class = "dropDown" required>
+									<option value = "joburg"> Johannesburg </option>
+									<option value = "cape-town"> Cape Town </option>
+									<option value = "durban"> Durban </option>
+									<option value = "london"> London </option>
+									<option value = "new-york"> New York </option>
+								</select>
+						</div>			
+
+						<div class = "dates">
+							<label for = "departureDate" id = "departureDate"> Departure Date: </label>
+								<input type = "date" id = "departureDate" name = "departureDate" required>
+
+							<label for = "arrivalDate" id = "arrivalDate""> Arrival Date: </label>
+								<input type = "date" id = "arrivalDate" name = "arrivalDate" required>
+						</div>
+					</div>
+
+					<div>
+						<label>Passengers</label>
+						<div class="passengers">
+							<div class="dropdown-group">
+								<label for="adults">Adults (16+)</label>
+								<select id="adults">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+
+							<div class="dropdown-group">
+								<label for="youngAdults">Young Adults (12–15)</label>
+								<select id="youngAdults">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+
+							<div class="dropdown-group">
+								<label for="children">Children (2–11)</label>
+								<select id="children">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+
+							<div class="dropdown-group">
+								<label for="infants">Infants (under 1)</label>
+								<select id="infants">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<p id = "cabinClassMsg">Please select your Cabin Class:</p>
+						<div id = "cabinClass">
+							<input type="radio" id="economy" name="cabinClass" value="economy">
+							<label for="economy">Economy</label>
+							<input type="radio" id="premium" name="cabinClass" value="premium">
+							<label for="premium"> Premium </label>
+							<input type="radio" id="business" name="cabinClass" value="business">
+							<label for="business"> Business </label><br><br>
+						</div>
+				</div>
+
+				 <button type="button" class="submit-btn">Submit</button>
+			</form>
+		</article>
+	</body>
+</html>
